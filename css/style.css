@@ -1,13 +1,13 @@
 :root {
-    --background-color: #f5f5f5;
-    --text-color: #333333;
-    --header-footer-bg: #222222;
-    --header-footer-text: #f5f5f5;
-    --accent-color: #1a73e8; /* Updated accent color for better contrast */
-    --dark-background-color: #121212;
-    --dark-text-color: #e0e0e0;
-    --dark-header-footer-bg: #1e1e1e;
-    --dark-header-footer-text: #ffffff;
+    --background-color: #ffffff; /* Light background for better readability */
+    --text-color: #000000; /* Dark text for contrast */
+    --header-footer-bg: #333333; /* Darker header/footer for contrast */
+    --header-footer-text: #ffffff; /* Light text for header/footer */
+    --accent-color: #ff6600; /* Accent color for buttons and links */
+    --dark-background-color: #1a1a1a; /* Dark mode background */
+    --dark-text-color: #f0f0f0; /* Light text for dark mode */
+    --dark-header-footer-bg: #2a2a2a; /* Dark mode header/footer */
+    --dark-header-footer-text: #ffffff; /* Light text for dark mode header/footer */
 }
 
 body.ocean-theme,
@@ -15,8 +15,8 @@ body.sunset-theme,
 body.forest-theme {
     background-size: cover;
     background-position: center;
-    color: #ffffff;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Improve text visibility */
+    color: var(--text-color);
+    text-shadow: none; /* Remove text shadow for clarity */
 }
 #infoPanel {
     position: fixed;
@@ -48,12 +48,11 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
     overflow-x: hidden; /* Prevent horizontal scroll */
     background-color: var(--background-color);
     color: var(--text-color); /* Ensure consistent text color */
     transition: background-color 0.5s ease, color 0.5s ease;
-    font-size: 16px; /* Adjusted for better readability on smaller screens */
+    font-size: 16px; /* Adjusted for better readability */
     line-height: 1.8;
     letter-spacing: 0.5px;
 }
@@ -61,7 +60,7 @@ body {
 header {
     background: var(--header-footer-bg);
     color: var(--header-footer-text);
-    padding: 10px;
+    padding: 20px; /* Increased padding for better spacing */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -118,6 +117,7 @@ main {
     align-items: flex-start;
     max-width: 100%;
     margin: 0 auto;
+    font-size: 18px; /* Larger font size for readability */
 }
 
 section {
@@ -137,6 +137,7 @@ img {
 .dark-mode footer {
     background-color: var(--dark-background-color) !important;
     color: var(--dark-text-color) !important;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6 {
@@ -160,7 +161,7 @@ button {
 
 .dark-mode nav ul li a, .dark-mode button {
     color: var(--dark-header-footer-text) !important;
-    background-color: rgba(255, 255, 255, 0.1) !important;
+    background-color: var(--accent-color) !important;
 }
 
 .dark-mode nav ul li a:hover, .dark-mode button:hover {
