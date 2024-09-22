@@ -17,4 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('dark-mode') === 'true') {
         document.body.classList.add('dark-mode');
     }
+
+    // Ensure text visibility in dark mode
+    document.body.style.color = getComputedStyle(document.body).getPropertyValue('--dark-text-color');
 });

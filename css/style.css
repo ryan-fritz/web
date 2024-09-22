@@ -74,7 +74,7 @@ body {
     line-height: 1.6;
     overflow-x: hidden; /* Prevent horizontal scroll */
     background-color: var(--background-color);
-    color: var(--header-footer-text);
+    color: var(--text-color); /* Ensure consistent text color */
     transition: background-color 0.5s ease, color 0.5s ease;
     font-size: 18px;
     line-height: 1.8;
