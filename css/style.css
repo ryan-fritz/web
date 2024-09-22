@@ -19,8 +19,11 @@ body {
 header, footer {
     background: var(--header-footer-bg);
     color: var(--header-footer-text);
-    padding: 10px 0;
+    padding: 10px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul {
@@ -31,16 +34,8 @@ nav ul {
     flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
 nav ul li {
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 nav ul li a {
@@ -79,7 +74,6 @@ section {
 }
 
 footer {
-    position: fixed;
     width: 100%;
     bottom: 0;
 }
