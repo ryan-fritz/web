@@ -48,9 +48,9 @@ nav ul li a, button {
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
     cursor: pointer;
-    padding: 10px 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 12px 18px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
     transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
 }
 
