@@ -30,13 +30,20 @@ nav ul {
     flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 nav ul li {
-    display: inline;
     margin: 0 10px;
 }
 
 nav ul li a {
-    color: #fff;
+    color: var(--header-footer-text);
     text-decoration: none;
 }
 
@@ -67,7 +74,6 @@ footer {
     }
 
     nav ul li {
-        display: block;
         margin: 5px 0;
     }
 
