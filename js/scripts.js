@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Document is ready');
-    setupFadeInAndDarkModeToggle();
+    setupDarkModeToggle();
 
     lazyLoadImages();
     setupInteractiveResearchVisuals();
@@ -47,25 +47,25 @@ function setupContactButton() {
         alert('Contact form functionality to be implemented.');
     });
 }
-function setupFadeInAndDarkModeToggle() {
-    // Fade-in effect for the body
-    document.body.style.opacity = 0;
-    document.body.style.transition = 'opacity 1s ease-in-out';
-    document.body.style.opacity = 1;
-
-    // Dark mode toggle
+function setupDarkModeToggle() {
     const toggleSwitch = document.createElement('button');
-    toggleSwitch.textContent = 'Toggle Dark Mode';
+    toggleSwitch.textContent = '🌙 Dark Mode';
     Object.assign(toggleSwitch.style, {
         position: 'fixed',
-        top: '10px',
-        right: '10px'
+        top: '80px',
+        right: '20px',
+        zIndex: 1001
     });
     document.body.appendChild(toggleSwitch);
 
     toggleSwitch.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
+        localStorage.setItem('dark-mode', document.body.classList.contains('dark-mode'));
     });
+
+    if (localStorage.getItem('dark-mode') === 'true') {
+        document.body.classList.add('dark-mode');
+    }
 }
 
 function lazyLoadImages() {
