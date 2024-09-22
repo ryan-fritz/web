@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.getElementById('brainCanvasContainer').appendChild(renderer.domElement);
 
+    const controls = new OrbitControls(camera, renderer.domElement);
     const raycaster = new THREE.Raycaster();
     const mouse = new THREE.Vector2();
     const tooltip = document.createElement('div');
@@ -25,9 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const infoPanel = document.createElement('div');
     infoPanel.id = 'infoPanel';
     document.body.appendChild(infoPanel);
-    controls.enableDamping = true;
-    controls.dampingFactor = 0.25;
-    controls.enableZoom = true;
+    const ambientLight = new THREE.AmbientLight(0x404040, 2); // Soft white light
+    scene.add(ambientLight);
 
     const resetButton = document.createElement('button');
     resetButton.textContent = 'Reset View';
