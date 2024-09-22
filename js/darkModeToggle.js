@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleSwitch.textContent = '🌙 Dark Mode';
     Object.assign(toggleSwitch.style, {
         position: 'fixed',
-        top: '20px',
+        top: '60px',
         right: '20px',
         zIndex: 1001
     });

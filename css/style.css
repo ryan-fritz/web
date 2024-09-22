@@ -89,7 +89,7 @@ nav ul li {
 }
 
 nav ul li a, button {
-    color: var(--header-footer-text);
+    color: var(--text-color);
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
     cursor: pointer;
@@ -101,7 +101,8 @@ nav ul li a, button {
 
 nav ul li a:hover, button:hover {
     color: #ffffff; /* White color for hover */
-    background-color: var(--accent-color); /* Accent color for hover background */
+    background-color: var(--accent-color);
+    color: var(--header-footer-text);
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }

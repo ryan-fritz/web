@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     scene.add(directionalLight);
 
     const loader = new GLTFLoader();
-    loader.load('path/to/brain_model.gltf', (gltf) => {
+    loader.load('models/brain_model.gltf', (gltf) => {
         scene.add(gltf.scene);
     }, (xhr) => {
         console.log((xhr.loaded / xhr.total * 100) + '% loaded');
