@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     setupInteractiveResearchVisuals();
     setupLoadMoreProjects();
     setupContactButton();
-    setupDarkModeToggle(); // Ensure the dark mode toggle is set up
+    setupDarkModeToggle();
+    lazyLoadImages(); // Ensure lazy loading is set up
 });
 
 function setupInteractiveResearchVisuals() {
