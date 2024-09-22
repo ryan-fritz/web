@@ -5,7 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
         position: 'fixed',
         top: '80px',
         right: '20px',
-        zIndex: 1001
+        zIndex: 1001,
+        backgroundColor: 'rgba(0, 0, 0, 0.7)',
+        color: '#ffffff',
+        border: 'none',
+        borderRadius: '5px',
+        padding: '10px 15px',
+        cursor: 'pointer',
+        transition: 'background-color 0.3s ease'
     });
     document.body.appendChild(toggleSwitch);
 
