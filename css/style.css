@@ -143,11 +143,9 @@ img {
     margin: 10px 0;
 }
 
-.dark-mode {
-    --background-color: #121212;
-    --text-color: #e0e0e0;
-    --header-footer-bg: #1e1e1e;
-    --header-footer-text: #ffffff;
+.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6 {
+    color: var(--text-color);
+    font-weight: bold;
 }
 
 .dark-mode body {
@@ -190,5 +188,7 @@ footer {
 
     h1, h2, h3, h4, h5, h6 {
         font-size: 1.2em;
+        color: var(--text-color);
+        font-weight: bold;
     }
 }
