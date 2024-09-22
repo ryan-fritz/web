@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const toggleSwitch = document.createElement('button');
-    toggleSwitch.textContent = 'Toggle Dark Mode';
+    toggleSwitch.textContent = '🌙 Dark Mode';
     Object.assign(toggleSwitch.style, {
         position: 'fixed',
         top: '10px',

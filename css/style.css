@@ -19,7 +19,7 @@ body {
 
 header {
     background: var(--header-footer-bg);
-    color: var(--header-footer-text);
+    color: var(--text-color);
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -48,8 +48,9 @@ nav ul li a, button {
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
     cursor: pointer;
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
 }
 
