@@ -4,6 +4,7 @@
     --header-footer-bg: #222222;
     --header-footer-text: #f5f5f5;
     --accent-color: #007acc; /* Accent color for links and highlights */
+}
 #infoPanel {
     position: fixed;
     bottom: 20px;
