@@ -75,4 +75,4 @@ function setupThemeSwitcher() {
     });
 
     images.forEach(image => imgObserver.observe(image));
-}
+});
