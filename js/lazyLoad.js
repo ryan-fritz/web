@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const images = document.querySelectorAll('img[data-src]');
+    const images = document.querySelectorAll('img[data-src], video[data-src]');
     const loadImage = (image) => {
         image.src = image.dataset.src;
         image.onload = () => image.removeAttribute('data-src');
