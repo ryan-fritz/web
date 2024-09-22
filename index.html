@@ -15,7 +15,9 @@
             <option value="forest">Forest</option>
         </select>
     </div>
-    <div id="main"></div>
+    <div id="main">
+        <div id="gameContainer"></div>
+    </div>
     <div id="footer"></div>
     <script>
         fetch('header.html').then(response => response.text()).then(data => document.getElementById('header').innerHTML = data);
@@ -25,6 +27,7 @@
     <script src="js/fadeIn.js"></script>
     <script src="js/darkModeToggle.js"></script>
     <script src="js/brainVisualization.js"></script>
+    <script src="js/clickGame.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 </html>
