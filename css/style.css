@@ -1,14 +1,23 @@
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --header-footer-bg: #333333;
+    --header-footer-text: #ffffff;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
     overflow-x: hidden; /* Prevent horizontal scroll */
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
-header {
-    background: #333;
-    color: #fff;
+header, footer {
+    background: var(--header-footer-bg);
+    color: var(--header-footer-text);
     padding: 10px 0;
     text-align: center;
 }
@@ -39,11 +48,14 @@ section {
     margin-bottom: 20px;
 }
 
+.dark-mode {
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --header-footer-bg: #1e1e1e;
+    --header-footer-text: #ffffff;
+}
+
 footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
     position: fixed;
     width: 100%;
     bottom: 0;

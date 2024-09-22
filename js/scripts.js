@@ -1,6 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Document is ready');
 
+    // Dark mode toggle
+    const toggleSwitch = document.createElement('button');
+    toggleSwitch.textContent = 'Toggle Dark Mode';
+    toggleSwitch.style.position = 'fixed';
+    toggleSwitch.style.top = '10px';
+    toggleSwitch.style.right = '10px';
+    document.body.appendChild(toggleSwitch);
+
+    toggleSwitch.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+    });
+
     // Lazy load images
     const images = document.querySelectorAll('img[data-src]');
     const loadImage = (image) => {
