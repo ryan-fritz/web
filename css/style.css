@@ -79,7 +79,7 @@ body {
 
 header {
     background: var(--header-footer-bg);
-    color: var(--text-color);
+    color: var(--header-footer-text);
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -104,7 +104,7 @@ nav ul li {
 }
 
 nav ul li a, button {
-    color: var(--text-color);
+    color: var(--header-footer-text);
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
     cursor: pointer;
@@ -166,5 +166,9 @@ footer {
 
     main {
         padding: 10px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 1.2em;
     }
 }
