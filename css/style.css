@@ -6,6 +6,19 @@
     --accent-color: #007acc; /* Accent color for links and highlights */
 }
 
+.selected-region {
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(255, 0, 0, 1);
+    }
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;

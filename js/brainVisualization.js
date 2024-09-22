@@ -13,11 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const mouse = new THREE.Vector2();
     const tooltip = document.createElement('div');
     tooltip.style.position = 'absolute';
-    tooltip.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
-    tooltip.style.color = '#fff';
-    tooltip.style.padding = '5px';
-    tooltip.style.borderRadius = '5px';
+    tooltip.style.backgroundColor = 'rgba(50, 50, 50, 0.8)';
+    tooltip.style.color = '#ffffff';
+    tooltip.style.padding = '8px';
+    tooltip.style.borderRadius = '8px';
     tooltip.style.display = 'none';
+    tooltip.style.fontSize = '0.9em';
+    tooltip.style.pointerEvents = 'none';
     document.body.appendChild(tooltip);
 
     const infoPanel = document.createElement('div');
@@ -36,7 +38,32 @@ document.addEventListener('DOMContentLoaded', () => {
     controls.dampingFactor = 0.25;
     controls.enableZoom = true;
 
-    const ambientLight = new THREE.AmbientLight(0x404040, 2);
+    const resetButton = document.createElement('button');
+    resetButton.textContent = 'Reset View';
+    Object.assign(resetButton.style, {
+        position: 'fixed',
+        top: '10px',
+        right: '10px',
+        zIndex: 1001,
+        padding: '10px 15px',
+        backgroundColor: 'rgba(0, 0, 0, 0.7)',
+        color: '#ffffff',
+        border: 'none',
+        borderRadius: '5px',
+        cursor: 'pointer',
+        transition: 'background-color 0.3s ease'
+    });
+    resetButton.addEventListener('mouseover', () => {
+        resetButton.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+    });
+    resetButton.addEventListener('mouseout', () => {
+        resetButton.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+    });
+    resetButton.addEventListener('click', () => {
+        camera.position.set(0, 0, 5);
+        controls.reset();
+    });
+    document.body.appendChild(resetButton);
     scene.add(ambientLight);
 
     const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
@@ -78,7 +105,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const intersects = raycaster.intersectObjects(scene.children, true);
         if (intersects.length > 0) {
             const selectedObject = intersects[0].object;
-            selectedObject.material.color.set(0xff0000); // Highlight color
+            selectedObject.material.color.set(0xff0000);
+            selectedObject.material.emissive.set(0xff0000);
+            selectedObject.material.emissiveIntensity = 0.5;
+            selectedObject.material.needsUpdate = true;
             tooltip.style.display = 'block';
             tooltip.style.left = `${event.clientX + 5}px`;
             tooltip.style.top = `${event.clientY + 5}px`;
