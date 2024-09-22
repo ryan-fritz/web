@@ -9,6 +9,24 @@
     --dark-header-footer-bg: #1e1e1e;
     --dark-header-footer-text: #ffffff;
 }
+
+body.ocean-theme {
+    background-image: url('images/ocean.jpg');
+    background-color: #2e8b57; /* Sea green */
+    color: #ffffff;
+}
+
+body.sunset-theme {
+    background-image: url('images/sunset.jpg');
+    background-color: #ff4500; /* Orange red */
+    color: #ffffff;
+}
+
+body.forest-theme {
+    background-image: url('images/forest.jpg');
+    background-color: #228b22; /* Forest green */
+    color: #ffffff;
+}
 #infoPanel {
     position: fixed;
     bottom: 20px;

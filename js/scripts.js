@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupLoadMoreProjects();
     setupContactButton();
     lazyLoadImages(); // Ensure lazy loading is set up
+    setupThemeSwitcher();
 });
 
 function setupInteractiveResearchVisuals() {
@@ -46,7 +47,16 @@ function setupContactButton() {
     });
 }
 
-function lazyLoadImages() {
+function setupThemeSwitcher() {
+    const themeSwitcher = document.getElementById('themeSwitcher');
+    themeSwitcher.addEventListener('change', (event) => {
+        document.body.className = ''; // Reset any existing theme
+        const selectedTheme = event.target.value;
+        if (selectedTheme !== 'default') {
+            document.body.classList.add(`${selectedTheme}-theme`);
+        }
+    });
+}
     const images = document.querySelectorAll('img[data-src]');
     const loadImage = (image) => {
         image.src = image.dataset.src;
