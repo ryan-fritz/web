@@ -27,36 +27,29 @@ header, footer {
     flex-wrap: wrap;
 }
 
-nav ul {
+nav ul, nav ul li {
     list-style: none;
     padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 0;
 }
 
 nav ul li {
     margin: 0 15px;
 }
 
-nav ul li a {
+nav ul li a, button {
     color: var(--accent-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #005f99; /* Darker shade of accent color for hover */
-}
-
-button {
     font-family: 'Roboto', sans-serif;
+    text-decoration: none;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
 }
 
-button:hover {
+nav ul li a:hover, button:hover {
+    color: #005f99; /* Darker shade of accent color for hover */
     background-color: #333333; /* Subtle hover background color */
     transform: scale(1.05);
 }
