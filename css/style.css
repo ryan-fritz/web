@@ -1,12 +1,13 @@
 :root {
-    --background-color: #ffffff;
-    --text-color: #000000;
-    --header-footer-bg: #333333;
-    --header-footer-text: #ffffff;
+    --background-color: #f5f5f5;
+    --text-color: #333333;
+    --header-footer-bg: #222222;
+    --header-footer-text: #f5f5f5;
+    --accent-color: #007acc; /* Accent color for links and highlights */
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -39,22 +40,23 @@ nav ul li {
 }
 
 nav ul li a {
-    color: var(--header-footer-text);
+    color: var(--accent-color);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #ffcc00; /* Example hover color */
+    color: #005f99; /* Darker shade of accent color for hover */
 }
 
 button {
+    font-family: 'Roboto', sans-serif;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
-    background-color: #555555; /* Example hover background color */
+    background-color: #333333; /* Subtle hover background color */
     transform: scale(1.05);
 }
 
