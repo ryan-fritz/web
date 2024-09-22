@@ -1,6 +1,6 @@
 :root {
-    --background-color: #ffffff; /* Light background for better readability */
-    --text-color: #000000; /* Dark text for contrast */
+    --background-color: #2e2e2e; /* Dark grey background for better readability */
+    --text-color: #e0e0e0; /* Light grey text for contrast */
     --header-footer-bg: #333333; /* Darker header/footer for contrast */
     --header-footer-text: #ffffff; /* Light text for header/footer */
     --accent-color: #ff6600; /* Accent color for buttons and links */
