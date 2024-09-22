@@ -119,9 +119,8 @@ nav ul li a, button {
 }
 
 nav ul li a:hover, button:hover {
-    color: #ffffff; /* White color for hover */
-    background-color: var(--accent-color);
-    color: var(--header-footer-text);
+    color: #ffffff !important; /* White color for hover */
+    background-color: var(--accent-color) !important;
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
@@ -148,28 +147,28 @@ img {
 }
 
 .dark-mode body {
-    background-color: var(--dark-background-color);
-    color: var(--dark-text-color);
+    background-color: var(--dark-background-color) !important;
+    color: var(--dark-text-color) !important;
 }
 
 .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6 {
-    color: var(--dark-text-color);
-    font-weight: bold;
+    color: var(--dark-text-color) !important;
+    font-weight: bold !important;
 }
 
 .dark-mode header, .dark-mode footer {
-    background-color: var(--dark-header-footer-bg);
-    color: var(--dark-header-footer-text);
+    background-color: var(--dark-header-footer-bg) !important;
+    color: var(--dark-header-footer-text) !important;
 }
 
 .dark-mode nav ul li a, .dark-mode button {
-    color: var(--dark-header-footer-text);
-    background-color: transparent;
+    color: var(--dark-header-footer-text) !important;
+    background-color: transparent !important;
 }
 
 .dark-mode nav ul li a:hover, .dark-mode button:hover {
-    background-color: var(--accent-color);
-    color: var(--dark-header-footer-text);
+    background-color: var(--accent-color) !important;
+    color: var(--dark-header-footer-text) !important;
 }
 
 footer {
