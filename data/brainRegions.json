@@ -1,0 +1,19 @@
+{
+    "regions": [
+        {
+            "name": "Frontal Lobe",
+            "functions": "Involved in decision making, problem solving, and planning.",
+            "relatedResearch": "Research on cognitive functions and executive processes."
+        },
+        {
+            "name": "Parietal Lobe",
+            "functions": "Processes sensory information it receives from the outside world.",
+            "relatedResearch": "Studies on spatial orientation and sensory perception."
+        },
+        {
+            "name": "Occipital Lobe",
+            "functions": "Responsible for visual processing.",
+            "relatedResearch": "Research on visual perception and processing."
+        }
+    ]
+}

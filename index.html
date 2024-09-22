@@ -10,7 +10,20 @@
     <div id="header"></div>
     <div id="main"></div>
     <div id="footer"></div>
-    <script>
+    <style>
+        #infoPanel {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            transition: opacity 0.5s ease;
+            opacity: 0;
+        }
+    </style>
         fetch('header.html').then(response => response.text()).then(data => document.getElementById('header').innerHTML = data);
         fetch('main.html').then(response => response.text()).then(data => document.getElementById('main').innerHTML = data);
         fetch('footer.html').then(response => response.text()).then(data => document.getElementById('footer').innerHTML = data);

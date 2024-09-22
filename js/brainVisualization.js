@@ -20,7 +20,18 @@ document.addEventListener('DOMContentLoaded', () => {
     tooltip.style.display = 'none';
     document.body.appendChild(tooltip);
 
-    const controls = new OrbitControls(camera, renderer.domElement);
+    const infoPanel = document.createElement('div');
+    infoPanel.style.position = 'fixed';
+    infoPanel.style.bottom = '20px';
+    infoPanel.style.left = '20px';
+    infoPanel.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
+    infoPanel.style.padding = '10px';
+    infoPanel.style.borderRadius = '5px';
+    infoPanel.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.2)';
+    infoPanel.style.maxWidth = '300px';
+    infoPanel.style.transition = 'opacity 0.5s ease';
+    infoPanel.style.opacity = 0;
+    document.body.appendChild(infoPanel);
     controls.enableDamping = true;
     controls.dampingFactor = 0.25;
     controls.enableZoom = true;
@@ -46,6 +57,20 @@ document.addEventListener('DOMContentLoaded', () => {
     function onMouseMove(event) {
         mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
         mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+        fetch('data/brainRegions.json')
+            .then(response => response.json())
+            .then(data => {
+                const regionData = data.regions.find(region => region.name === selectedObject.name);
+                if (regionData) {
+                    infoPanel.innerHTML = `
+                        <h3>${regionData.name}</h3>
+                        <p><strong>Functions:</strong> ${regionData.functions}</p>
+                        <p><strong>Related Research:</strong> ${regionData.relatedResearch}</p>
+                    `;
+                    infoPanel.style.opacity = 1;
+                }
+            })
+            .catch(error => console.error('Error loading region data:', error));
     }
 
     function onClick(event) {
