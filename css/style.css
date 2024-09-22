@@ -44,16 +44,18 @@ nav ul li {
 }
 
 nav ul li a, button {
-    color: var(--accent-color);
+    color: var(--header-footer-text);
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
     cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
     transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
 }
 
 nav ul li a:hover, button:hover {
-    color: #005f99; /* Darker shade of accent color for hover */
-    background-color: #333333; /* Subtle hover background color */
+    color: #ffffff; /* White color for hover */
+    background-color: var(--accent-color); /* Accent color for hover background */
     transform: scale(1.05);
 }
 
