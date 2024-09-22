@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setupInteractiveResearchVisuals();
     setupLoadMoreProjects();
     setupContactButton();
-    setupDarkModeToggle();
     lazyLoadImages(); // Ensure lazy loading is set up
 });
 
