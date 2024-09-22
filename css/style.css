@@ -6,6 +6,38 @@
     --accent-color: #007acc; /* Accent color for links and highlights */
 }
 
+#brainCanvasContainer {
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+#infoPanel {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+.selected-region {
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(0, 255, 0, 1);
+    }
+}
+
 .selected-region {
     animation: glow 1s infinite alternate;
 }
