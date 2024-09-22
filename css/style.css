@@ -76,7 +76,7 @@ body {
     background-color: var(--background-color);
     color: var(--text-color); /* Ensure consistent text color */
     transition: background-color 0.5s ease, color 0.5s ease;
-    font-size: 18px;
+    font-size: 16px; /* Adjusted for better readability on smaller screens */
     line-height: 1.8;
     letter-spacing: 0.5px;
 }
@@ -175,7 +175,7 @@ button {
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
     cursor: pointer;
-    padding: 10px 15px;
+    padding: 15px 20px; /* Increased padding for larger touch targets */
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
@@ -213,5 +213,9 @@ footer {
         font-size: 1.2em;
         color: var(--text-color);
         font-weight: bold;
+    }
+
+    button {
+        padding: 12px 18px; /* Adjusted for mobile */
     }
 }

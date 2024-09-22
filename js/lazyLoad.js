@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
             observer.unobserve(entry.target);
         });
     }, {
-        threshold: 0,
-        rootMargin: "0px 0px 300px 0px"
+        threshold: 0.1, // Adjusted threshold for better performance
+        rootMargin: "0px 0px 200px 0px" // Reduced root margin for earlier loading
     });
 
     images.forEach(image => imgObserver.observe(image));
