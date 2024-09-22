@@ -1,8 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Document is ready');
-    setupDarkModeToggle();
-
-    lazyLoadImages();
     setupInteractiveResearchVisuals();
     setupLoadMoreProjects();
     setupContactButton();
