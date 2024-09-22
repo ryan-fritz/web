@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Document is ready');
 
+    // Fade-in effect for the body
+    document.body.style.opacity = 0;
+    document.body.style.transition = 'opacity 1s ease-in-out';
+    document.body.style.opacity = 1;
+
     // Dark mode toggle
     const toggleSwitch = document.createElement('button');
     toggleSwitch.textContent = 'Toggle Dark Mode';

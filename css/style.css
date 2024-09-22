@@ -13,6 +13,7 @@ body {
     overflow-x: hidden; /* Prevent horizontal scroll */
     background-color: var(--background-color);
     color: var(--text-color);
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 header, footer {
@@ -45,6 +46,11 @@ nav ul li {
 nav ul li a {
     color: var(--header-footer-text);
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Example hover color */
 }
 
 main {
