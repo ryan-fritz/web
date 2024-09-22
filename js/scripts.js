@@ -3,7 +3,50 @@ document.addEventListener('DOMContentLoaded', () => {
     setupFadeInAndDarkModeToggle();
 
     lazyLoadImages();
+    setupInteractiveResearchVisuals();
+    setupLoadMoreProjects();
+    setupContactButton();
 });
+
+function setupInteractiveResearchVisuals() {
+    const ctx = document.getElementById('researchChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Data 1', 'Data 2', 'Data 3'],
+            datasets: [{
+                label: 'Research Data',
+                data: [12, 19, 3],
+                backgroundColor: ['rgba(75, 192, 192, 0.2)'],
+                borderColor: ['rgba(75, 192, 192, 1)'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+}
+
+function setupLoadMoreProjects() {
+    const loadMoreButton = document.getElementById('loadMoreProjects');
+    loadMoreButton.addEventListener('click', () => {
+        // Logic to load more projects
+        alert('Load more projects functionality to be implemented.');
+    });
+}
+
+function setupContactButton() {
+    const contactButton = document.getElementById('contactButton');
+    contactButton.addEventListener('click', () => {
+        // Logic to open contact form
+        alert('Contact form functionality to be implemented.');
+    });
+}
 function setupFadeInAndDarkModeToggle() {
     // Fade-in effect for the body
     document.body.style.opacity = 0;
