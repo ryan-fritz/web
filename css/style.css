@@ -21,10 +21,10 @@ header, footer {
     background: var(--header-footer-bg);
     color: var(--header-footer-text);
     padding: 10px;
-    text-align: center;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 nav ul {
@@ -32,7 +32,8 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    flex-wrap: wrap;
+    margin: 0;
 }
 
 nav ul li {
@@ -62,6 +63,9 @@ button:hover {
 
 main {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 section {
