@@ -161,6 +161,17 @@ img {
     color: var(--dark-header-footer-text) !important;
 }
 
+button {
+    color: var(--header-footer-text);
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 .dark-mode nav ul li a, .dark-mode button {
     color: var(--dark-header-footer-text) !important;
     background-color: rgba(255, 255, 255, 0.1) !important;
