@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Document is ready');
+    setupFadeInAndDarkModeToggle();
 
+    lazyLoadImages();
+});
+function setupFadeInAndDarkModeToggle() {
     // Fade-in effect for the body
     document.body.style.opacity = 0;
     document.body.style.transition = 'opacity 1s ease-in-out';
@@ -19,8 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleSwitch.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
     });
+}
 
-    // Lazy load images
+function lazyLoadImages() {
     const images = document.querySelectorAll('img[data-src]');
     const loadImage = (image) => {
         image.src = image.dataset.src;
@@ -39,4 +44,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     images.forEach(image => imgObserver.observe(image));
-});
+}
