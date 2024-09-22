@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 header {
@@ -15,6 +16,8 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
