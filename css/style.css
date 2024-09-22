@@ -118,7 +118,14 @@ nav ul li a, button {
     transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-nav ul li a:hover, button:hover {
+button:hover {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+nav ul li a:hover {
     color: #ffffff !important; /* White color for hover */
     background-color: var(--accent-color) !important;
     transform: scale(1.05);
