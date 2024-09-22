@@ -100,10 +100,18 @@ document.addEventListener('DOMContentLoaded', () => {
             selectedObject.material.emissive.set(0x00ff00);
             selectedObject.material.emissiveIntensity = 0.7;
             selectedObject.material.needsUpdate = true;
+            selectedObject.scale.set(1.1, 1.1, 1.1); // Slightly enlarge on selection
             tooltip.style.display = 'block';
             tooltip.style.left = `${event.clientX + 5}px`;
             tooltip.style.top = `${event.clientY + 5}px`;
             tooltip.textContent = 'Brain Region Selected';
+        } else {
+            // Reset scale for non-selected objects
+            scene.children.forEach(child => {
+                if (child.isMesh) {
+                    child.scale.set(1, 1, 1);
+                }
+            });
         }
     }
 
